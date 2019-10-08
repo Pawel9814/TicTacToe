@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+/// <summary>
+/// Klasa kontroler dla gry. Klasa zarzadza instancjami klasy GridSpace
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public GridSpace[] spacesList;
@@ -12,7 +16,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text gameOverText;
     int moveCount = 0;
 
-
+    /// <summary>
+    /// Metoda wywolywana przy pierwszym tworzeniu klasy
+    /// </summary>
     void Awake()
     {
         gameOverPanel.SetActive(false);
@@ -21,6 +27,9 @@ public class GameManager : MonoBehaviour
         moveCount = 0;
     }
 
+    /// <summary>
+    /// Przydziela referencje klasy GameManager do pol z klas GridSpace
+    /// </summary>
     void SetGameControllerReferenceOnButtons()
     {
         for (int i = 0; i < spacesList.Length; i++)
@@ -30,6 +39,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Czysci plansze 
+    /// </summary>
     public void ResetGame()
     {
         moveCount = 0;
@@ -41,12 +53,18 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(false);
     }
 
-
+    /// <summary>
+    /// metoda do walidacji aktualnie wykonujacego ruch gracza
+    /// </summary>
+    /// <returns>zwraca aktualnego gracza</returns>
     public string GetPlayerSide()
     {
         return playerSide;
     }
 
+    /// <summary>
+    /// Konczy ture aktualnego gracza
+    /// </summary>
     public void EndTurn()
     {
         moveCount++;
@@ -86,13 +104,17 @@ public class GameManager : MonoBehaviour
 
         ChangeSides();
     }
-
+    /// <summary>
+    /// Zmienia przeciwnika
+    /// </summary>
     void ChangeSides()
     {
         playerSide = (playerSide == "X") ? "O" : "X";
     }
 
-
+    /// <summary>
+    /// Konczy rozgrywke
+    /// </summary>
     void GameOver()
     {
         for (int i = 0; i < spacesList.Length; i++)
@@ -102,7 +124,10 @@ public class GameManager : MonoBehaviour
 
         GameOverPanelTog(playerSide + " Wygrywa!");
     }
-
+    /// <summary>
+    /// Wyswietla komunikat po zakonczeniu gry
+    /// </summary>
+    /// <param name="msg">komunikat do wyswietlenia</param>
     void GameOverPanelTog(string msg)
     {
         gameOverPanel.SetActive(true);

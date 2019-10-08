@@ -1,0 +1,157 @@
+\hypertarget{class_game_manager}{}\doxysection{Game\+Manager Class Reference}
+\label{class_game_manager}\index{GameManager@{GameManager}}
+
+
+Klasa kontroler dla gry. Klasa zarzadza instancjami klasy \mbox{\hyperlink{class_grid_space}{Grid\+Space}}  
+
+
+Inheritance diagram for Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_manager_a677f07c15ac2142cbca109622b1c3b75}{Reset\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Czysci plansze \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_game_manager_aa3fb24ac1fb81475b8d23c402195cf6a}{Get\+Player\+Side}} ()
+\begin{DoxyCompactList}\small\item\em metoda do walidacji aktualnie wykonujacego ruch gracza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_af8064f3dcc9fc38daee0a9f11d1f9b2b}{End\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Konczy ture aktualnego gracza \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_adc203eed109cc6d9886fb120f8f269d3}\label{class_game_manager_adc203eed109cc6d9886fb120f8f269d3}} 
+\mbox{\hyperlink{class_grid_space}{Grid\+Space}}\mbox{[}$\,$\mbox{]} {\bfseries spaces\+List}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_manager_a2959177ee51ac31badbf8b1bc8f7f637}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wywolywana przy pierwszym tworzeniu klasy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_a4881cbde399dba1032cc07bd4d19d000}{Set\+Game\+Controller\+Reference\+On\+Buttons}} ()
+\begin{DoxyCompactList}\small\item\em Przydziela referencje klasy \mbox{\hyperlink{class_game_manager}{Game\+Manager}} do pol z klas \mbox{\hyperlink{class_grid_space}{Grid\+Space}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_a2dcdce5a45be33f4df91cab2a19279c0}{Change\+Sides}} ()
+\begin{DoxyCompactList}\small\item\em Zmienia przeciwnika \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_a8d69157cb6b97eabeff2374d8e9adeaf}{Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Konczy rozgrywke \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_ac5f2a9b1bd465969805d44b00996fa5e}{Game\+Over\+Panel\+Tog}} (string msg)
+\begin{DoxyCompactList}\small\item\em Wyswietla komunikat po zakonczeniu gry \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_a573a52c3070245c7ede0d184dc87ed50}\label{class_game_manager_a573a52c3070245c7ede0d184dc87ed50}} 
+string {\bfseries player\+Side}
+\item 
+\mbox{\Hypertarget{class_game_manager_a62fea83db03fd0f2f7db406621e7e7a4}\label{class_game_manager_a62fea83db03fd0f2f7db406621e7e7a4}} 
+Game\+Object {\bfseries game\+Over\+Panel}
+\item 
+\mbox{\Hypertarget{class_game_manager_a872f7a8c2fb0e6961163f1b181b40584}\label{class_game_manager_a872f7a8c2fb0e6961163f1b181b40584}} 
+T\+M\+P\+\_\+\+Text {\bfseries game\+Over\+Text}
+\item 
+\mbox{\Hypertarget{class_game_manager_aade3446c99b0409c89072382d91779a5}\label{class_game_manager_aade3446c99b0409c89072382d91779a5}} 
+int {\bfseries move\+Count} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa kontroler dla gry. Klasa zarzadza instancjami klasy \mbox{\hyperlink{class_grid_space}{Grid\+Space}} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_manager_a2959177ee51ac31badbf8b1bc8f7f637}\label{class_game_manager_a2959177ee51ac31badbf8b1bc8f7f637}} 
+\index{GameManager@{GameManager}!Awake@{Awake}}
+\index{Awake@{Awake}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywolywana przy pierwszym tworzeniu klasy 
+
+\mbox{\Hypertarget{class_game_manager_a2dcdce5a45be33f4df91cab2a19279c0}\label{class_game_manager_a2dcdce5a45be33f4df91cab2a19279c0}} 
+\index{GameManager@{GameManager}!ChangeSides@{ChangeSides}}
+\index{ChangeSides@{ChangeSides}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{ChangeSides()}{ChangeSides()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Change\+Sides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienia przeciwnika 
+
+\mbox{\Hypertarget{class_game_manager_af8064f3dcc9fc38daee0a9f11d1f9b2b}\label{class_game_manager_af8064f3dcc9fc38daee0a9f11d1f9b2b}} 
+\index{GameManager@{GameManager}!EndTurn@{EndTurn}}
+\index{EndTurn@{EndTurn}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
+{\footnotesize\ttfamily void Game\+Manager.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konczy ture aktualnego gracza 
+
+\mbox{\Hypertarget{class_game_manager_a8d69157cb6b97eabeff2374d8e9adeaf}\label{class_game_manager_a8d69157cb6b97eabeff2374d8e9adeaf}} 
+\index{GameManager@{GameManager}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GameOver()}{GameOver()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Konczy rozgrywke 
+
+\mbox{\Hypertarget{class_game_manager_ac5f2a9b1bd465969805d44b00996fa5e}\label{class_game_manager_ac5f2a9b1bd465969805d44b00996fa5e}} 
+\index{GameManager@{GameManager}!GameOverPanelTog@{GameOverPanelTog}}
+\index{GameOverPanelTog@{GameOverPanelTog}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GameOverPanelTog()}{GameOverPanelTog()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Game\+Over\+Panel\+Tog (\begin{DoxyParamCaption}\item[{string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wyswietla komunikat po zakonczeniu gry 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & komunikat do wyswietlenia\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_manager_aa3fb24ac1fb81475b8d23c402195cf6a}\label{class_game_manager_aa3fb24ac1fb81475b8d23c402195cf6a}} 
+\index{GameManager@{GameManager}!GetPlayerSide@{GetPlayerSide}}
+\index{GetPlayerSide@{GetPlayerSide}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GetPlayerSide()}{GetPlayerSide()}}
+{\footnotesize\ttfamily string Game\+Manager.\+Get\+Player\+Side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+metoda do walidacji aktualnie wykonujacego ruch gracza 
+
+\begin{DoxyReturn}{Returns}
+zwraca aktualnego gracza
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_manager_a677f07c15ac2142cbca109622b1c3b75}\label{class_game_manager_a677f07c15ac2142cbca109622b1c3b75}} 
+\index{GameManager@{GameManager}!ResetGame@{ResetGame}}
+\index{ResetGame@{ResetGame}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{ResetGame()}{ResetGame()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Reset\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Czysci plansze 
+
+\mbox{\Hypertarget{class_game_manager_a4881cbde399dba1032cc07bd4d19d000}\label{class_game_manager_a4881cbde399dba1032cc07bd4d19d000}} 
+\index{GameManager@{GameManager}!SetGameControllerReferenceOnButtons@{SetGameControllerReferenceOnButtons}}
+\index{SetGameControllerReferenceOnButtons@{SetGameControllerReferenceOnButtons}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{SetGameControllerReferenceOnButtons()}{SetGameControllerReferenceOnButtons()}}
+{\footnotesize\ttfamily void Game\+Manager.\+Set\+Game\+Controller\+Reference\+On\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przydziela referencje klasy \mbox{\hyperlink{class_game_manager}{Game\+Manager}} do pol z klas \mbox{\hyperlink{class_grid_space}{Grid\+Space}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/barte/\+Desktop/\+Tic\+Tac\+Toe-\/master/\+Tic\+Tac\+Toe-\/master/\+Tik\+Tak\+Toe/\+Assets/\+Scripts/Game\+Manager.\+cs\end{DoxyCompactItemize}
